@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Black Jack</title>
+    <link rel="stylesheet" href="Styles/style.css"  />
+    <script type="text/javascript" src="Scripts/blackjack.js"></script>
+</head>
+<body>
+    <div id="main">
+        <h1>Blackjack</h1>
+        <br />
+		Dealer Hand:
+        <div id="dealerDiv" style="width: 150px"></div>
+        <br />
+        Player Hand:
+        <div id="playerDiv" style="width: 150px"></div>
+        <br />
+        <div id="controls" style="width: 100px; height: 29px">
+            <button type="button" id="btnHit" value="Hit" onclick="Hit()">Hit</button>
+            <button type="button" id="btnStand" value="Stand" onclick="Stand()">Stand</button>
+        </div>
+		<br />
+        Dealer Score:
+        <div id="dealerScore" style="width: 150px"></div>
+        <br />
+        Player Score:
+        <div id="playerScore" style="width: 150px"></div>
+        <br />
+        Game Status:
+        <div id="gameStatus" style="width: 150px"></div>
+        <br />
+        <button type="button" id="btnNewGame" value="New Game" onclick="NewGame()">New Game</button>
+
+	</div>
+</body>
+</html>
