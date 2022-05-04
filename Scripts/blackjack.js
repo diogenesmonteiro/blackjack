@@ -12,13 +12,13 @@ var dealerStatus;
 var playerStatus;
 
 //Creates the cards
-function Card(cardValue, cardSuit) { 
+function Card(cardValue, cardSuit) {
     this.cardValue = cardValue;
     this.cardSuit = cardSuit;
 }
 
 //Creates the deck of cards
-function DeckCards() { 
+function DeckCards() {
     this.nextcard = 0;
     this.deck = new Array(52);
     for (i = 0; i < 52; i++) {
@@ -30,7 +30,7 @@ function DeckCards() {
 }
 
 // Shuffles the deck of cards
-function Shuffle() { 
+function Shuffle() {
     for (i = 0; i < 1000; i++) {
         //Get Card 1
         card1Index = Math.floor(Math.random() * 52);
@@ -151,9 +151,9 @@ function DisplayScores() {
         dealerTotalScore.innerHTML = Score(dealerHand);
     else if (dealerHand[1].cardValue == 1 || dealerHand[1].cardValue == 11 || dealerHand[1].cardValue == 12 || dealerHand[1].cardValue == 13)
         dealerTotalScore.innerHTML += "More than " + 10;
-    else 
+    else
         dealerTotalScore.innerHTML += "More than " + dealerHand[1].cardValue;
-     dealerStatus = Score(dealerHand);
+    dealerStatus = Score(dealerHand);
 
     // Displays player score
     playerTotalScore = document.getElementById('playerScore');
@@ -196,12 +196,12 @@ function Score(hand) {
             cardsvalue += hand[i].cardValue;
         total = cardsvalue;
     }
-        if (ace && total <= 11)
-            total += 10;
+    if (ace && total <= 11)
+        total += 10;
     return total;
 }
 
-// Check fo winner or loser and shows result
+// Check for winner, loser or tie and shows result
 function GameStatus() {
     gameFinalStatus = document.getElementById("gameStatus");
     gameFinalStatus.innerHTML = "Playing...";
